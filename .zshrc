@@ -42,4 +42,6 @@ zplug load
 # end zplug
 
 # alias
+
+# University's java code styling checker
 alias checkstyle="/home/sammy/Documents/Courses/CSC116/cs-checkstyle/checkstyle"
