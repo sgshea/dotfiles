@@ -8,6 +8,7 @@ Host: ThinkPad X1 Yoga Gen 6
 - 32 GB Ram
 - 1 TB SSD
 - 1920x1200 Touchscreen
+
 Installed with luks encyption, btrfy, grub
 
 # Theming
@@ -26,18 +27,22 @@ Konsole
 * gruvbox theme
 * hack font
 * zplug plugin management
+
 Neovim
 * Primary terminal text editor.
 * gruvbox-material
 * vim-plug used to manage plugins.
 * coq plugin used for completion
+
 emacs
 * Uses stock DOOM
 * evil mode
 * doom-gruvbox
+
 VSCodium
 * gruvbox-material
 * VSCode Neovim for integration with Neovim
+
 spicetify
 * Onepunch theme for spotify (gruvbox)
 
