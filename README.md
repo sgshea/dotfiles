@@ -1,5 +1,10 @@
 # personal dotfiles
 These are my dotfiles for some programs that I have configured heavily. As well as the theming I use currently.
+## yadm
+Dotfiles are managed by yet another dotfiles manager [https://yadm.io/#]
+- [ ] bootstrap (autoinstall)
+- [ ] autoinstall theming?
+- [ ] what KDE files can be migrated?
 ## Current Installation
 OS: Arch Linux
 Host: ThinkPad X1 Yoga Gen 6
