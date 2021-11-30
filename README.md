@@ -1,7 +1,6 @@
 # personal dotfiles
 These are my dotfiles for some programs that I have configured heavily. As well as the theming I use currently.
 ## yadm
-Dotfiles are managed by yet another dotfiles manager [https://yadm.io/#]
 - [ ] bootstrap (autoinstall)
 - [ ] autoinstall theming?
 - [ ] what KDE files can be migrated?
@@ -24,7 +23,8 @@ gruvbox, a theme using pastel 'retro groove' colors.
 The Global Theme is Breeze Dark. The Plasma style, colors, and icons are from the GruvboxPlasma theme. The rest of the appearance is Breeze Dark defaults.
 The SDDM login screen uses the "Slice" theme.
 ### Panel
-The panel is the regular Plasma panel. Widgets used are "Event Calendar" and "Music Player +".
+Panel is using latte panel. There are 3 panels on top of the main screen, and one dock on the lower right set to autohide.
+As latte supports exporting layouts, it is easier to import to new installs compared to replicating default plasma panels.
 
 # Applications
 Konsole
