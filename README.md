@@ -21,7 +21,7 @@ Panel is using latte panel. There are 3 panels on top of the main screen, and on
 As latte supports exporting layouts, it is easier to import to new installs compared to replicating default plasma panels.
 
 # Applications
-* Konsole
+Konsole
 * zsh
 * gruvbox theme
 * hack font
