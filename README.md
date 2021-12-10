@@ -1,7 +1,7 @@
 # personal dotfiles
 These are my dotfiles for some programs that I have configured heavily. As well as the theming I use currently.
 ## Current Installation
-OS: Arch Linux
+OS: Fedora Linux
 Host: ThinkPad X1 Yoga Gen 6
 - i7-1165G7
 - Iris Xe Graphics
