@@ -21,9 +21,10 @@ source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 # plugins
 
-zplug "zdharma/fast-syntax-highlighting"
+zplug "zdharma-continuum/fast-syntax-highlighting"
 zplug "plugins/git",    from:oh-my-zsh
 zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Load theme file
 zplug "sbugzu/gruvbox-zsh", as:theme
@@ -43,5 +44,3 @@ zplug load
 
 # alias
 
-# University's java code styling checker
-alias checkstyle="/home/sammy/Documents/Courses/CSC116/cs-checkstyle/checkstyle"
