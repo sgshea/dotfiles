@@ -49,8 +49,10 @@ fi
 zplug load
 # end zplug
 
-export PATH="$HOME/.emacs.d/bin:$PATH"
 # alias
 
+<<<<<<< HEAD
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+=======
+>>>>>>> 470fb991b6ab66798448caa4b2d5e6797bbdf660
