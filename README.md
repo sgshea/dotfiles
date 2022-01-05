@@ -32,17 +32,3 @@ Neovim
 * gruvbox-material
 * vim-plug used to manage plugins.
 * coq plugin used for completion
-
-emacs
-* Uses stock DOOM
-* evil mode
-* doom-gruvbox
-
-VSCodium
-* gruvbox-material
-* VSCode Neovim for integration with Neovim
-
-spicetify
-* Onepunch theme for spotify (gruvbox)
-
-
