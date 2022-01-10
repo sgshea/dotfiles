@@ -2,7 +2,6 @@
 !README.md
 !.gitignore
 !.bashrc
-!.gitconfig
 !.zshrc
 !.config/nvim/init.vim
 !Documents/Other/sammy_latte.layout.latte
