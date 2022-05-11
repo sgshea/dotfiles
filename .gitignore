@@ -3,7 +3,7 @@
 !.gitignore
 !.bashrc
 !.zshrc
+!.p10k.zsh
 !.config/nvim/init.vim
-!Documents/Other/sammy_latte.layout.latte
-!Pictures/wallhaven-721383.jpg
-!Pictures/wallhaven-pk8k39.jpg
+!Multimedia/wallhaven-721383.jpg
+!Multimedia/wallhaven-pk8k39.jpg
