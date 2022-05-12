@@ -24,7 +24,6 @@ Konsole
 * zplug plugin management
 
 Neovim
-* Primary terminal text editor.
-* gruvbox-material
-* vim-plug used to manage plugins.
-* coq plugin used for completion
+* Currently moving to packer.nvim plugin management (lua!)
+* Old init.vim still exists under old_init.vim
+* in progress

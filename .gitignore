@@ -4,4 +4,4 @@
 !.bashrc
 !.zshrc
 !.p10k.zsh
-!.config/nvim/init.vim
+!.config/nvim/**
