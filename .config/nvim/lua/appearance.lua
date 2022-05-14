@@ -1,5 +1,3 @@
--- Ruler at 100
-vim.o.cc = '100'
 
 -- Numbering
 vim.o.relativenumber = false

@@ -1,8 +1,8 @@
------------------------------------------------
--- Plugin Manager Configuration		     --
--- packer.nvim				     --
--- https://github.com/wbthomason/packer.nvim --
------------------------------------------------
+------------------------------------------------
+-- Plugin Manager Configuration for neovim    --
+-- packer.nvim                                --
+-- https://github.com/wbthomason/packer.nvim  --
+------------------------------------------------
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -37,51 +37,47 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- packer can manage itself
 -- IDE-Features
     use {
-        'kyazdani42/nvim-tree.lua',
+        'kyazdani42/nvim-tree.lua',           -- file manager
         requires = {
               'kyazdani42/nvim-web-devicons', -- optional, for file icon
             },
         config = function() require'nvim-tree'.setup {} end
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
-    use 'tpope/vim-fugitive'            -- Git stuff
-    use 'nvim-lua/plenary.nvim'         -- Required by Telescope
-    use 'nvim-telescope/telescope.nvim' -- Nice grep interface
-    use {                               -- Wrapper that makes configuring LSP way nicer
+    use 'tpope/vim-fugitive'            -- git
+    use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
+    use 'nvim-telescope/telescope.nvim' -- fuzzy finder
+    use {                               -- wrapper that makes configuring LSP way nicer
         'junnplus/nvim-lsp-setup',
         requires = {
             'neovim/nvim-lspconfig',
-            'williamboman/nvim-lsp-installer',
+            'williamboman/nvim-lsp-installer',  -- :LspInstallInfo
+                                                -- :LspInstall [server]
         }
     }
     use 'hrsh7th/nvim-cmp'              -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp'          -- LSP source for nvim-cmp
-    use 'saadparwaiz1/cmp_luasnip'      -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip'              -- Snippets plugin
+    use 'saadparwaiz1/cmp_luasnip'      -- Snippets source for nvim-cmp
     -- Languages
     use 'sheerun/vim-polyglot'          -- For most languages
     -- Appearance
     use 'sainnhe/gruvbox-material'      -- gruv
-    use 'Mofiqul/vscode.nvim'           -- 
 
-    use {
+    use {                               -- statusline
        'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use "lukas-reineke/indent-blankline.nvim" -- Indent guides
-    use {'stevearc/dressing.nvim'}      -- Make things generally prettier
+    use "lukas-reineke/indent-blankline.nvim" -- indent guides
+    use {'stevearc/dressing.nvim'}      -- make things generally prettier
     -- Dashboard (start screen)
     use {
-      'goolord/alpha-nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' },
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
     }
-
-
-
-
-
-
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
