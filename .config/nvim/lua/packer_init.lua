@@ -35,48 +35,65 @@ end
 -- Install plugins
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- packer can manage itself
--- IDE-Features
+    -- IDE-Features
     use {
-        'kyazdani42/nvim-tree.lua',           -- file manager
-        requires = {
-              'kyazdani42/nvim-web-devicons', -- optional, for file icon
-            },
-        config = function() require'nvim-tree'.setup {} end
+        "kyazdani42/nvim-tree.lua",
+        requires = "kyazdani42/nvim-web-devicons" ,
+        wants = "nvim-web-devicons",
+        config = function()
+          require("nvim-web-devicons").setup()
+
+          require("nvim-tree").setup {
+            hijack_cursor = true,
+            view = {
+              width = 40
+            }
+          }
+        end
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
     use 'tpope/vim-fugitive'            -- git
     use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
     use 'nvim-telescope/telescope.nvim' -- fuzzy finder
     use {                               -- wrapper that makes configuring LSP way nicer
-        'junnplus/nvim-lsp-setup',
-        requires = {
-            'neovim/nvim-lspconfig',
-            'williamboman/nvim-lsp-installer',  -- :LspInstallInfo
-                                                -- :LspInstall [server]
-        }
+      'junnplus/nvim-lsp-setup',
+      requires = {
+        'neovim/nvim-lspconfig',            -- :LspInstallInfo
+        'williamboman/nvim-lsp-installer',  -- :LspInstall [server]
+      }
     }
     use 'hrsh7th/nvim-cmp'              -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp'          -- LSP source for nvim-cmp
     use 'L3MON4D3/LuaSnip'              -- Snippets plugin
     use 'saadparwaiz1/cmp_luasnip'      -- Snippets source for nvim-cmp
+    use 'tpope/vim-surround'            -- surround
     -- Languages
     use 'sheerun/vim-polyglot'          -- For most languages
+
+    use 'Olical/conjure'                -- Clojure
+    use 'tpope/vim-dispatch'
+    use 'clojure-vim/vim-jack-in'
+    use 'radenling/vim-dispatch-neovim'
+    use 'guns/vim-sexp'
+    use 'tpope/vim-sexp-mappings-for-regular-people'
+
     -- Appearance
+    use 'kyazdani42/nvim-web-devicons'
     use 'sainnhe/gruvbox-material'      -- gruv
 
     use {                               -- statusline
-       'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+     'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use "lukas-reineke/indent-blankline.nvim" -- indent guides
     use {'stevearc/dressing.nvim'}      -- make things generally prettier
     -- Dashboard (start screen)
     use {
-        'goolord/alpha-nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
-        end
+      'goolord/alpha-nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
     }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
