@@ -24,6 +24,15 @@ Konsole
 * zplug plugin management
 
 Neovim
-* Currently moving to packer.nvim plugin management (lua!)
-* Old init.vim still exists under old_init.vim
-* in progress
+* packer.nvim plugin management in lua
+
+Most major plugins
+* leader key is space
+* nvim-tree - (spc-n-t) to toggle file explorer
+* nvim-treesitter - better highlighting
+* vim-fugitive - git
+* telescope - fuzzy finder
+* lualine - bottom status bar
+* alpha - start screen dashboard
+* presence - discord integration
+* 
