@@ -38,11 +38,10 @@ return packer.startup(function(use)
     -- IDE-Features
     use {
         "kyazdani42/nvim-tree.lua",
-        requires = "kyazdani42/nvim-web-devicons" ,
+        requires = { 'kyazdani42/nvim-web-devicons' },
         wants = "nvim-web-devicons",
         config = function()
           require("nvim-web-devicons").setup()
-
           require("nvim-tree").setup {
             hijack_cursor = true,
             view = {
@@ -51,9 +50,9 @@ return packer.startup(function(use)
           }
         end
     }
+    use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
     use 'tpope/vim-fugitive'            -- git
-    use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
     use 'nvim-telescope/telescope.nvim' -- fuzzy finder
     use {                               -- wrapper that makes configuring LSP way nicer
       'junnplus/nvim-lsp-setup',
@@ -95,6 +94,8 @@ return packer.startup(function(use)
           require'alpha'.setup(require'alpha.themes.startify'.config)
       end
     }
+    -- presence
+    use 'andweeb/presence.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

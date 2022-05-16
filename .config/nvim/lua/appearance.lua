@@ -14,5 +14,3 @@ vim.cmd([[
 vim.cmd[[
   colorscheme gruvbox-material
 ]]
-
-

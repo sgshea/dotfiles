@@ -21,4 +21,5 @@ require('nvim-tree-config')
 require('indent-config')
 require('lualine-config')
 
+require('discord')
 require('bindings')
