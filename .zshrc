@@ -23,6 +23,8 @@ compinit
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+export PATH=$PATH:~/bin/
+
 # zplug
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'

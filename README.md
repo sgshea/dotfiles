@@ -23,16 +23,49 @@ Konsole
 * hack font
 * zplug plugin management
 
-Neovim
+## Neovim
 * packer.nvim plugin management in lua
+leader key of space
+### Major plugins, im not listing them all
+* nvim-tree for file stuff
+* 	spc-n-t to toggle
+* nvim-treesitter for better highlighting
+* barbar for the top bufferline
+* 	I still need to configure this
+* vim-fugitive for git
+* telescope for fuzzy finding
+* 	spc-f-f for files
+* lualine for the bottom statusbar
+* alpha-nvim for start dashboard
+* presence for discord integration (status)
+* nvim-web-devicons for the icon integration
 
-Most major plugins
-* leader key is space
-* nvim-tree - (spc-n-t) to toggle file explorer
-* nvim-treesitter - better highlighting
-* vim-fugitive - git
-* telescope - fuzzy finder
-* lualine - bottom status bar
-* alpha - start screen dashboard
-* presence - discord integration
-* 
+#### lsp/completion
+* nvim-lsp-setup
+* 	nvim-lspconfig
+* 		:LspInstallInfo
+* 	nvim-lsp-installer
+* 		:LspInstall [server]
+* nvim-cmp for completion
+* 	cmp-nvim-lsp
+* 	cmp-buffer
+* 	cmp-path
+* 	cmp-cmdline
+* LuaSnip for snippets
+* 	cmp_luasnip
+
+For now only setup with servers for Java (jdtls) and Clojure (clojure_lsp)
+#### Conjure
+This neovim conjuration includes plugins to also work with the Clojure language!
+Uses the localleaderkey ","
+* Conjure for interactive development (REPL)
+* 	`:Lein` to start a REPL
+* 	`, c f` to connect to a REPL, or open a Clojure file
+* 	`, l v` to close the log window
+* 	`, l v` for a vertical split between code and REPL
+* 	`, l h` for a horizontal split between code and REPL
+* 	`, e b` evaluate current buffer
+* 	`, e f` evaluate code in the file
+* 	`, e e` evaluate current expression
+* 	`, e r` evaluate top level form
+* 	`, e !` evaluate current form and replace with result

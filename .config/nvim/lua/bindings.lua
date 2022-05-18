@@ -1,5 +1,6 @@
 -- Set mapleader
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- Telescope
 vim.api.nvim_set_keymap(

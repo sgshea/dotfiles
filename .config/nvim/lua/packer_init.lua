@@ -26,6 +26,11 @@ vim.cmd [[
   augroup end
 ]]
 
+vim.cmd [[
+  set mouse+=a
+  set termguicolors
+]]
+
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
@@ -36,6 +41,8 @@ end
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- packer can manage itself
     -- IDE-Features
+    
+    -- nvim-tree file explorer
     use {
         "kyazdani42/nvim-tree.lua",
         requires = { 'kyazdani42/nvim-web-devicons' },
@@ -51,9 +58,18 @@ return packer.startup(function(use)
         end
     }
     use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
+
+    -- nvim-treesitter, better highlighting
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
     use 'tpope/vim-fugitive'            -- git
-    use 'nvim-telescope/telescope.nvim' -- fuzzy finder
+    -- barbar - a top bufferline
+    use {
+      'romgrk/barbar.nvim',
+      requires = {'kyazdani42/nvim-web-devicons'}
+    }
+
+    -- telescope - fuzzy finder
+    use 'nvim-telescope/telescope.nvim'
     use {                               -- wrapper that makes configuring LSP way nicer
       'junnplus/nvim-lsp-setup',
       requires = {
@@ -61,8 +77,13 @@ return packer.startup(function(use)
         'williamboman/nvim-lsp-installer',  -- :LspInstall [server]
       }
     }
-    use 'hrsh7th/nvim-cmp'              -- Autocompletion plugin
-    use 'hrsh7th/cmp-nvim-lsp'          -- LSP source for nvim-cmp
+    -- Autocompletion
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+
     use 'L3MON4D3/LuaSnip'              -- Snippets plugin
     use 'saadparwaiz1/cmp_luasnip'      -- Snippets source for nvim-cmp
     use 'tpope/vim-surround'            -- surround

@@ -17,9 +17,9 @@ require('packer_init')
 require('appearance')
 
 -- Configurations
+require('lsp')
 require('nvim-tree-config')
 require('indent-config')
 require('lualine-config')
 
-require('discord')
 require('bindings')
