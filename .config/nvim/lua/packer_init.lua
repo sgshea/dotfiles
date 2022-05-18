@@ -61,7 +61,8 @@ return packer.startup(function(use)
 
     -- nvim-treesitter, better highlighting
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
-    use 'tpope/vim-fugitive'            -- git
+    -- git
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
     -- barbar - a top bufferline
     use {
       'romgrk/barbar.nvim',
@@ -77,6 +78,12 @@ return packer.startup(function(use)
         'williamboman/nvim-lsp-installer',  -- :LspInstall [server]
       }
     }
+
+    -- repeat for plugins `.`
+    use 'tpope/vim-repeat'
+    -- Leap - Sneak (using s-(characters to search)), easymotion, pounce
+    use 'ggandor/leap.nvim'
+
     -- Autocompletion
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
