@@ -100,6 +100,7 @@ return packer.startup(function(use)
     -- Appearance
     use 'kyazdani42/nvim-web-devicons'
     use 'sainnhe/gruvbox-material'      -- gruv
+    use 'shaunsingh/nord.nvim'          -- nord
 
     use {                               -- statusline
      'nvim-lualine/lualine.nvim',

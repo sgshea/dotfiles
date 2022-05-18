@@ -12,5 +12,13 @@ vim.cmd([[
 ]])
 
 vim.cmd[[
+" contrast for gruvbox-material: 'hard', 'medium'(default), 'soft'
+  let g:gruvbox_material_background = 'hard'
+" Better performance
+  let g:gruvbox_material_better_performance = 1
+" light/dark
+  set background=dark
+
   colorscheme gruvbox-material
+
 ]]
