@@ -39,6 +39,7 @@ leader key of space
 * alpha-nvim for start dashboard
 * presence for discord integration (status)
 * nvim-web-devicons for the icon integration
+* which-key to help remember keybindings
 
 #### lsp/completion
 * nvim-lsp-setup

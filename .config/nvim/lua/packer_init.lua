@@ -29,6 +29,7 @@ vim.cmd [[
 vim.cmd [[
   set mouse+=a
   set termguicolors
+  set clipboard=unnamedplus
 ]]
 
 -- Use a protected call so we don't error out on first use
@@ -83,6 +84,15 @@ return packer.startup(function(use)
     use 'tpope/vim-repeat'
     -- Leap - Sneak (using s-(characters to search)), easymotion, pounce
     use 'ggandor/leap.nvim'
+
+    -- which-key to help remember keybindings
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {
+        }
+      end
+    }
 
     -- Autocompletion
     use 'hrsh7th/cmp-nvim-lsp'
