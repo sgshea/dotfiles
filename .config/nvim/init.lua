@@ -12,7 +12,6 @@ require('options')
 -- Configurations
 require('lsp')
 require('nvim-tree-config')
-require('indent-config')
 require('lualine-config')
 
 require('bindings')

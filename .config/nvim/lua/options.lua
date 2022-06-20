@@ -22,11 +22,18 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
+  list = true,
 }
 vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+-- indenting
+require("indent_blankline").setup {
+  space_char_blankline = " ",
+  show_current_context = true,
+}
 
 -- colorschemes
 vim.cmd[[
