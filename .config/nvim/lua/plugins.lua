@@ -47,21 +47,15 @@ packer.init {
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- packer can manage itself
     -- IDE-Features
+
+    -- notifications
+    use 'rcarriga/nvim-notify'
+    vim.notify = require("notify")
     
     -- nvim-tree file explorer
     use {
-        "kyazdani42/nvim-tree.lua",
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        wants = "nvim-web-devicons",
-        config = function()
-          require("nvim-web-devicons").setup()
-          require("nvim-tree").setup {
-            hijack_cursor = true,
-            view = {
-              width = 40
-            }
-          }
-        end
+        'kyazdani42/nvim-tree.lua',
+        requires = { 'kyazdani42/nvim-web-devicons', },
     }
     use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
 

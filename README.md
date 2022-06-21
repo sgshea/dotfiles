@@ -31,7 +31,6 @@ leader key of space
 * 	spc-n-t to toggle
 * nvim-treesitter for better highlighting
 * barbar for the top bufferline
-* 	I still need to configure this
 * vim-fugitive for git
 * telescope for fuzzy finding
 * 	spc-f-f for files
@@ -40,6 +39,7 @@ leader key of space
 * presence for discord integration (status)
 * nvim-web-devicons for the icon integration
 * which-key to help remember keybindings
+* nvim-notify for fancy notifications
 
 #### lsp/completion
 * nvim-lsp-setup
