@@ -20,11 +20,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the packer_init.lua file
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost packer_init.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
 --
@@ -92,6 +92,10 @@ return packer.startup(function(use)
         }
       end
     }
+
+    -- Debugging
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    require("dapui").setup()
 
     -- Autocompletion
     use 'hrsh7th/cmp-nvim-lsp'

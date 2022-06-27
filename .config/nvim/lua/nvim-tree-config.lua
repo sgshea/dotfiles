@@ -16,6 +16,15 @@ require("nvim-tree").setup({
   },
 })
 
+-- treesitter
+require("nvim-treesitter.configs").setup {
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil
+  }
+}
+
 -- barbar integration
 local nvim_tree_events = require('nvim-tree.events')
 local bufferline_state = require('bufferline.state')
