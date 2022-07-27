@@ -57,6 +57,7 @@ return packer.startup(function(use)
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons', },
     }
+    use 'p00f/nvim-ts-rainbow'          -- rainbow brackets
     use 'nvim-lua/plenary.nvim'         -- all the lua functions he dosen't want to write twice
 
     -- nvim-treesitter, better highlighting
@@ -71,12 +72,14 @@ return packer.startup(function(use)
 
     -- telescope - fuzzy finder
     use 'nvim-telescope/telescope.nvim'
-    use {                               -- wrapper that makes configuring LSP way nicer
-      'junnplus/nvim-lsp-setup',
-      requires = {
-        'neovim/nvim-lspconfig',            -- :LspInstallInfo
-        'williamboman/nvim-lsp-installer',  -- :LspInstall [server]
-      }
+
+    -- lsp, DAP, linter, formatter configuration
+    -- use command "Mason" to open interface
+    -- configure in lsp.lua
+    use {
+    { "williamboman/mason.nvim", branch = "main" },
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
     }
 
     -- repeat for plugins `.`

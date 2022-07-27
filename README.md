@@ -13,8 +13,6 @@ gruvbox, a theme using pastel 'retro groove' colors.
 
 ## KDE Theming
 The Global Theme is Breeze Dark. The Plasma style, colors, and icons are from the GruvboxPlasma theme. The rest of the appearance is Breeze Dark defaults.
-### Panel
-Used to use Latte Dock, but now only use a single top plasma panel. Use the fullscreen application launcher in left corner, event calendar widget in center, and center tray on right.
 
 # Applications
 Konsole
@@ -42,11 +40,9 @@ leader key of space
 * nvim-notify for fancy notifications
 
 #### lsp/completion
-* nvim-lsp-setup
-* 	nvim-lspconfig
-* 		:LspInstallInfo
-* 	nvim-lsp-installer
-* 		:LspInstall [server]
+* mason.nvim to configure lsp, dap, linters, formatters
+*   Use :mason or edit lsp.lua to configure
+*   Currently have lua, java, clojure, and c configured
 * nvim-cmp for completion
 * 	cmp-nvim-lsp
 * 	cmp-buffer
@@ -55,7 +51,10 @@ leader key of space
 * LuaSnip for snippets
 * 	cmp_luasnip
 
-For now only setup with servers for Java (jdtls) and Clojure (clojure_lsp)
+#### barbar
+* top bufferline
+* move between using ALT-, and ALT-.
+
 #### Conjure
 This neovim conjuration includes plugins to also work with the Clojure language!
 Uses the localleaderkey ","
